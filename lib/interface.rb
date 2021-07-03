@@ -1,8 +1,7 @@
 require_relative 'membership_fee'
 
-p 'The Flatfair Membership Fee Calculator'
-
-p "How often do you pay rent? Enter week or month:"
+p 'Welcome to the flatfair membership fee calculator'
+p 'How often do you pay rent? Enter week or month:'
 print '> '
 rent_period = gets.chomp.downcase
 
