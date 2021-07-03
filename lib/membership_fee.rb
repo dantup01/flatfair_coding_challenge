@@ -51,3 +51,21 @@ def validation_rent_amount(rent_amount, rent_period)
     raise TypeError.new('Monthly rent_amount must be below maximum value of 866000')
   end
 end
+
+# Main calculation method
+def calculate_membership_fee(rent_amount, rent_period, organisation_unit)
+  # initiate validation to check inputs are correct
+  if validation_rent_amount(rent_amount, rent_period) == nil
+    if org_unit_has_fixed_fee(organisation_unit) == 0
+      if rent_period == 'week' && rent_amount > 12000
+        (rent_amount * VAT).round
+      elsif rent_period == 'month' && ((rent_amount * 12) / 52) > 12000
+        ((rent_amount * 12 / 52) * VAT).round
+      else
+        (12000 * VAT).round
+      end
+    else
+      org_unit_has_fixed_fee(organisation_unit)
+    end
+  end
+end
