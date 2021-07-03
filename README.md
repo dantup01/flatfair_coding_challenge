@@ -1,6 +1,6 @@
 # Membership fee calculator
 
-A user can enter their weekly or monthly rent amounts and the calculator will determine the membership fee that needs to be paid
+With this application a user can enter their weekly or monthly rent amounts and the calculator will determine the membership fee that needs to be paid.
 
 # Setup
 
